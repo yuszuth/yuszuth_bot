@@ -35,6 +35,7 @@ def send_help(message):
 def solve(message):
     d = dict()
     word = message.text
+    word = word.lower()
     for i in word:
         if i in d.keys():
             d.update({i: d.get(i) + 1})
