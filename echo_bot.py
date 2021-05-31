@@ -2,6 +2,7 @@ import os
 import telebot
 import database as db
 import models
+from sqlalchemy.orm import scoped_session
 from collections import OrderedDict
 
 models.Base.metadata.create_all(bind=db.engine)
