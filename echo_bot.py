@@ -1,6 +1,7 @@
 import os
 import telebot
 import database as db
+import models
 from collections import OrderedDict
 
 models.Base.metadata.create_all(bind=db.engine)
