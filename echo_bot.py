@@ -61,7 +61,7 @@ def solve(message):
         bot.reply_to(message, ans.result)
 
     else:
-        r_n = open('russian_nouns.txt', mode=r).read()
+        r_n = open('russian_nouns.txt', mode='r').read()
         nouns = []
 
         for noun in r_n:
