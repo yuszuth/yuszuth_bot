@@ -67,10 +67,11 @@ def solve(message):
         for noun in r_n:
             d = dict()
             for i in noun:
-                if i in d.keys():
-                    d.update({i: d.get(i) + 1})
-                else:
-                    d.update({i: 1})
+                if i != '\n':
+                    if i in d.keys():
+                        d.update({i: d.get(i) + 1})
+                    else:
+                        d.update({i: 1})
             new_d = OrderedDict(sorted(d.items()))
             enc_noun = ''
             for i in new_d.keys():
